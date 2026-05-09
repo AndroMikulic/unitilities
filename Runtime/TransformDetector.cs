@@ -16,6 +16,7 @@ namespace Unitilities
         [Header("State")]
         [Tooltip("Is transform detection active?")]
         public bool detect;
+
         int frameCount = 0;
         Vector3 lastPosition;
         Vector3 lastScale;

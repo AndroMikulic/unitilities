@@ -17,6 +17,7 @@ namespace Unitilities
         [Header("State")]
         [Tooltip("Is the scaling active")]
         public bool scale;
+
         float t = 0f;
         int direction = 1;
 

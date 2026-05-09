@@ -8,11 +8,14 @@ namespace Unitilities
         [Header("Settings")]
         [Tooltip("Clamp in local or world space.")]
         public Space space;
+
         public bool clampX = true;
         public bool clampY = true;
         public bool clampZ = true;
+
         [Tooltip("Minimum position coordiantes.")]
         public Vector3 minPosition;
+
         [Tooltip("Maximum position coordiantes.")]
         public Vector3 maxPosition;
 

@@ -10,7 +10,6 @@ namespace Unitilities
 
         [Tooltip("Snap in local or world space.")]
         public Space space = Space.World;
-
         public bool snapX = true;
         public bool snapY = true;
         public bool snapZ = true;

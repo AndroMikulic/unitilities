@@ -10,6 +10,7 @@ namespace Unitilities
 
         [Header("Settings")]
         public float speed = 1.0f;
+
         [Tooltip("Anything under this distance will be considered as having arrived at the target's position.")]
         public float distanceThreshold = 0.001f;
 
@@ -19,6 +20,7 @@ namespace Unitilities
         [Header("State")]
         [Tooltip("Is the smooth follow active?")]
         public bool follow;
+
         bool atTargetLocation;
 
         void Update()

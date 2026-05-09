@@ -8,6 +8,7 @@ namespace Unitilities
         [Header("Settings")]
         public Vector3 targetPosition;
         public float speed = 1f;
+
         [Tooltip("Controls speed over time (0–1). X axis = progress, Y axis = speed multiplier")]
         public AnimationCurve speedCurve = AnimationCurve.Linear(0, 1, 1, 1);
 

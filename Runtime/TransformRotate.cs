@@ -9,7 +9,6 @@ namespace Unitilities
         public float yRotationSpeed = 0f;
         public float zRotationSpeed = 0f;
 
-
         [Header("State")]
         [Tooltip("Is the rotation active")]
         public bool rotate;

@@ -11,6 +11,7 @@ namespace Unitilities
         [Header("Settings")]
         [Tooltip("Degrees per second")]
         public float rotationSpeed = 1.0f;
+
         [Tooltip("Anything under this angle (in degrees) will be treated as if the object is looking straight at the target.")]
         [Range(0.0f, 180f)]
         public float angleThreshold = 1f;
@@ -21,6 +22,7 @@ namespace Unitilities
         [Header("State")]
         [Tooltip("Is the smooth look at active?")]
         public bool lookAt;
+
         [Tooltip("Is the object looking directly at the target?")]
         bool lookingDirectlyAtTarget;
 
