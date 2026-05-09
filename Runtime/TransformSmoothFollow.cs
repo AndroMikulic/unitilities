@@ -10,6 +10,8 @@ namespace Unitilities
 
         [Header("Settings")]
         public float speed = 1.0f;
+        [Tooltip("The offset from the target's position.")]
+        public Vector3 offset;
 
         [Tooltip("Anything under this distance will be considered as having arrived at the target's position.")]
         public float distanceThreshold = 0.001f;
@@ -34,7 +36,7 @@ namespace Unitilities
 
         void SmoothFollow()
         {
-            var direction = target.position - transform.position;
+            var direction = target.position + offset - transform.position;
             if (direction.sqrMagnitude < distanceThreshold)
             {
                 // Just arrived at location.
