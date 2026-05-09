@@ -1,9 +1,9 @@
-using Unitilities;
 using UnityEditor;
 using UnityEngine;
 namespace Unitilities
 {
     [CustomEditor(typeof(TransformSmoothFollow))]
+    [CanEditMultipleObjects]
     public class TransformSmoothFollowEditor : Editor
     {
         public override void OnInspectorGUI()

@@ -1,14 +1,15 @@
 using UnityEditor;
+
 namespace Unitilities
 {
-    [CustomEditor(typeof(TransformScale))]
+    [CustomEditor(typeof(TransformClampPosition))]
     [CanEditMultipleObjects]
-    public class TransfromScaleEditor : Editor
+    public class TransformClampPositionEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Scales the attached Transform between starting and ending scales.",
+                "Clamps the object's position within min and max bounds.",
                 MessageType.Info);
 
             DrawDefaultInspector();

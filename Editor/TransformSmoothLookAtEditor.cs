@@ -4,6 +4,7 @@ using UnityEngine;
 namespace Unitilities
 {
     [CustomEditor(typeof(TransformSmoothLookAt))]
+    [CanEditMultipleObjects]
     public class TransformSmoothLookAtEditor : Editor
     {
         public override void OnInspectorGUI()

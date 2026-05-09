@@ -20,6 +20,11 @@ namespace Unitilities
             {
                 return;
             }
+            Rotate();
+        }
+
+        void Rotate()
+        {
             transform.Rotate(
                 xRotationSpeed * Time.deltaTime,
                 yRotationSpeed * Time.deltaTime,

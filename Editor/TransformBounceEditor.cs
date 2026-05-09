@@ -3,6 +3,7 @@ using UnityEditor;
 namespace Unitilities
 {
     [CustomEditor(typeof(TransformBounce))]
+    [CanEditMultipleObjects]
     public class TransformBounceEditor : Editor
     {
         public override void OnInspectorGUI()

@@ -26,6 +26,11 @@ namespace Unitilities
             {
                 return;
             }
+            Scale();
+        }
+
+        void Scale()
+        {
             t += Time.deltaTime * speed * direction;
             if (t >= 1)
             {

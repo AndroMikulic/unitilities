@@ -1,14 +1,15 @@
 using UnityEditor;
+
 namespace Unitilities
 {
-    [CustomEditor(typeof(TransformScale))]
+    [CustomEditor(typeof(TransformSnapToGrid))]
     [CanEditMultipleObjects]
-    public class TransfromScaleEditor : Editor
+    public class TransformSnapToGridEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Scales the attached Transform between starting and ending scales.",
+                "Snaps the object to the coordinate grid. Does so in LATE UPDATE!.",
                 MessageType.Info);
 
             DrawDefaultInspector();

@@ -37,23 +37,18 @@ namespace Unitilities
         void Update()
         {
             if (!bounce)
+            {
                 return;
+            }
+            Bounce();
+        }
 
-            currentDestination =
-                direction == 1
-                ? targetPosition
-                : originPosition;
-
+        void Bounce()
+        {
+            currentDestination = direction == 1 ? targetPosition : originPosition;
             t += Time.deltaTime * speed * speedCurve.Evaluate(t) * direction;
-
             t = Mathf.Clamp01(t);
-
-            transform.position = Vector3.Lerp(
-                originPosition,
-                targetPosition,
-                t
-            );
-
+            transform.position = Vector3.Lerp(originPosition, targetPosition, t);
             if ((transform.position - currentDestination).sqrMagnitude <= zeroThreshold)
             {
                 if (direction == 1)
@@ -69,8 +64,17 @@ namespace Unitilities
             }
         }
 
-        public void StartBouncing() => bounce = true;
-        public void StopBouncing() => bounce = false;
-        public void ToggleBouncing() => bounce = !bounce;
+        public void StartBouncing()
+        {
+            bounce = true;
+        }
+        public void StopBouncing()
+        {
+            bounce = false;
+        }
+        public void ToggleBouncing()
+        {
+            bounce = !bounce;
+        }
     }
 }

@@ -34,6 +34,11 @@ namespace Unitilities
             {
                 return;
             }
+            Detect();
+        }
+
+        void Detect()
+        {
             if (frameCount < frameDelay)
             {
                 frameCount++;

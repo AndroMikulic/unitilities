@@ -27,6 +27,11 @@ namespace Unitilities
             {
                 return;
             }
+            SmoothFollow();
+        }
+
+        void SmoothFollow()
+        {
             var direction = target.position - transform.position;
             if (direction.sqrMagnitude < distanceThreshold)
             {

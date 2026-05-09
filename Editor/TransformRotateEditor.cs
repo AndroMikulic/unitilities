@@ -1,9 +1,9 @@
-using Unitilities;
 using UnityEditor;
 
 namespace Unitilities
 {
     [CustomEditor(typeof(TransformRotate))]
+    [CanEditMultipleObjects]
     public class TransformRotateEditor : Editor
     {
         public override void OnInspectorGUI()

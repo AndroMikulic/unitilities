@@ -30,6 +30,11 @@ namespace Unitilities
             {
                 return;
             }
+            SmoothLookAt();
+        }
+
+        void SmoothLookAt()
+        {
             var direction = target.position - transform.position;
             var angle = Vector3.Angle(transform.forward, direction);
             if (angle < angleThreshold)
@@ -42,11 +47,7 @@ namespace Unitilities
                 return;
             }
             lookingDirectlyAtTarget = false;
-            transform.rotation = Quaternion.RotateTowards(
-                                    transform.rotation,
-                                    Quaternion.LookRotation(direction),
-                                    rotationSpeed * Time.deltaTime
-                                );
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(direction), rotationSpeed * Time.deltaTime);
         }
 
         public void SetTarget(Transform target)
