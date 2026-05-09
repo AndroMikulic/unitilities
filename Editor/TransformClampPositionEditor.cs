@@ -9,7 +9,7 @@ namespace Unitilities
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Clamps the object's position within min and max bounds.",
+                "Clamps the object's position within min and max bounds. Processed in LateUpdate().",
                 MessageType.Info);
 
             DrawDefaultInspector();

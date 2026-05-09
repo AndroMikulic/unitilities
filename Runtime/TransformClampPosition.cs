@@ -26,7 +26,7 @@ namespace Unitilities
         [Tooltip("Is position clamping active?")]
         public bool clamp;
 
-        void Update()
+        void LateUpdate()
         {
             if (!clamp)
             {

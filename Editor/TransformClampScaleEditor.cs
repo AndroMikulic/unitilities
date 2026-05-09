@@ -2,14 +2,14 @@ using UnityEditor;
 
 namespace Unitilities
 {
-    [CustomEditor(typeof(TransformDetector))]
+    [CustomEditor(typeof(TransformClampScale))]
     [CanEditMultipleObjects]
-    public class TransformDetectorEditor : Editor
+    public class TransformClampScaleEditor : Editor
     {
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Invokes a Unity event when the attached Transform moves, rotates or scales. Processed in LateUpdate().",
+                "Clamps the object's scale within min and max bounds. Processed in LateUpdate().",
                 MessageType.Info);
 
             DrawDefaultInspector();

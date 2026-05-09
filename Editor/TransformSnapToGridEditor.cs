@@ -9,7 +9,7 @@ namespace Unitilities
         public override void OnInspectorGUI()
         {
             EditorGUILayout.HelpBox(
-                "Snaps the object to the coordinate grid. Does so in LATE UPDATE!.",
+                "Snaps the object to the coordinate grid. Processed in LateUpdate().",
                 MessageType.Info);
 
             DrawDefaultInspector();

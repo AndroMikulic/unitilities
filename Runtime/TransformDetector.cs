@@ -29,7 +29,7 @@ namespace Unitilities
             lastRotation = transform.rotation;
         }
 
-        void Update()
+        void LateUpdate()
         {
             if (!detect)
             {
