@@ -32,10 +32,10 @@ namespace Unitilities
         Vector3 originalPosition;
         float time;
         float decayFactor = 0f;
-
         float seedX;
         float seedY;
         float seedZ;
+        bool reset = false;
 
         void Start()
         {
@@ -65,6 +65,11 @@ namespace Unitilities
             }
             else
             {
+                if (reset == true)
+                {
+                    Start();
+                }
+                reset = false;
                 decayFactor = 1f;
             }
 
@@ -90,6 +95,11 @@ namespace Unitilities
 
         void ResetPosition()
         {
+            if (reset)
+            {
+                return;
+            }
+            reset = true;
             if (space == Space.Self)
             {
                 transform.localPosition = originalPosition;
@@ -112,9 +122,9 @@ namespace Unitilities
             this.frequency = frequency;
         }
 
-        public void SetDecayTime(float decayTime)
+        public void SetDecayTime(float decayIntensity)
         {
-            this.decayIntensity = decayTime;
+            this.decayIntensity = decayIntensity;
         }
 
         public void StartShaking()
